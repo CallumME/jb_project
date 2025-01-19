@@ -18,7 +18,7 @@ The steps I used to run the project are listed below
 To Seed the DB run the command ./vendor/bin/sail artisan db:seed
 
 To run the dispatcher for the welcome email run the command ./vendor/bin/sail artisan dispatch:test-job {id}
-NOTE: you will need to make the env variable are set up to actually set an email. I used mailtrap to test this
+NOTE: you will need to make the env variable are set up to actually send an email. I used mailtrap to test this
 
 To use the weather endpoint you will need to acquire an api key and also add that to the env file.
 I used OpenWeatherMap, so may env vars ended up looking like this

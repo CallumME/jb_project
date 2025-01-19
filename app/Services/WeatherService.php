@@ -29,7 +29,6 @@ class WeatherService
             return $weatherData;
         }
 
-        // dd($apiKey);
         $response = Http::get($apiURL, [
             'q' => $city,
             'appid' => $apiKey,

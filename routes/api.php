@@ -18,13 +18,13 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/weather', [WeatherController::class, 'showWeather']);
 
 });
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 
 // Public API Routes
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 ;
 Route::post('/register', [AuthController::class, 'register']);
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 
 Route::get('/heartbeat', function () {

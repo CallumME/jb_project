@@ -14,6 +14,6 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-
+        // Unnessary since users are seeded in UserSeeder and create posts
     }
 }
