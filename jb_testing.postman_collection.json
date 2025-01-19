@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "7994c9e9-c551-4ff8-8174-312330b84250",
+		"name": "jb_testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19759575"
+	},
+	"item": [
+		{
+			"name": "localhost/api/posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "gkPPO8CT4BawLldL5YtiPJCfMr26GJ5CIimmY1xHc3dbbe27",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/users/2",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				},
+				"description": "```\n/**\n     * @SWG\\Get(\n     *     path=\"/posts\",\n     *     summary=\"Get a list of posts\",\n     *     tags={\"Posts\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/posts/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|JAvDozVp5o952UFKjue4liCzqd7WnRqLxfTHZgQ235b96a6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/posts/4",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"posts",
+						"4"
+					]
+				},
+				"description": "    /**\n     * @SWG\\Get(\n     *     path=\"/posts/{id}\",\n     *     summary=\"Gets a specific post by ID\",\n     *     tags={\"Posts\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|JAvDozVp5o952UFKjue4liCzqd7WnRqLxfTHZgQ235b96a6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "testing",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "this is a large string",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/posts",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				},
+				"description": "  /**\n     * @SWG\\Post(\n     *     path=\"/posts\",\n     *     summary=\"Creates a new post\",\n     *     tags={\"Posts\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/posts/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|JAvDozVp5o952UFKjue4liCzqd7WnRqLxfTHZgQ235b96a6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "testing",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "this is a large string3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/posts/4",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"posts",
+						"4"
+					]
+				},
+				"description": "   /**\n     * @SWG\\Patch(\n     *     path=\"/posts/{id}\",\n     *     summary=\"updates specific post by ID\",\n     *     tags={\"Posts\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/posts/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|JAvDozVp5o952UFKjue4liCzqd7WnRqLxfTHZgQ235b96a6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/posts/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				},
+				"description": "   /**\n     * @SWG\\Delete(\n     *     path=\"/posts/{id}\",\n     *     summary=\"Deletes post by ID\",\n     *     tags={\"Posts\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/users/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|JAvDozVp5o952UFKjue4liCzqd7WnRqLxfTHZgQ235b96a6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/users/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				},
+				"description": "  /**\n     * @SWG\\Get(\n     *     path=\"/users/{id}\",\n     *     summary=\"Get a specific user by ID\",\n     *     tags={\"Users\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "callum",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test5@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/register",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "  /**\n     * @SWG\\Get(\n     *     path=\"/register\",\n     *     summary=\"Register a new user\",\n     *     tags={\"Auth\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test5@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": " /**\n     * @SWG\\Get(\n     *     path=\"/login\",\n     *     summary=\"Login as a user\",\n     *     tags={\"Auth\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "XqmpxEMkcUh920QpL2YIna2phX3nZrP7Wud3Zpmt385171c6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/logout",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": " /**\n     * @SWG\\Get(\n     *     path=\"/register\",\n     *     summary=\"Log out of current user\",\n     *     tags={\"Auth\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=400, description=\"Invalid request\")\n     * )\n     */"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/weather",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ZAq0hp5VxZDIWzDokgZe94VThK1oLSrhszGGMJfw67fa7745",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/weather",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"weather"
+					]
+				},
+				"description": "/**  \n\\* @SWG\\\\Get(  \n\\* path=\"/weather\",  \n\\* summary=\"Get the weather for a city (hardcoded to Perth)\",  \n\\* tags={\"Weather\"},  \n\\* @SWG\\\\Response(response=200, description=\"Successful operation\"),  \n\\* @SWG\\\\Response(response=503, description=\"Unable to retrieve weather data\")  \n\\* )  \n\\*/"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/heartbeat",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/heartbeat",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"heartbeat"
+					]
+				},
+				"description": "/**\n     * @SWG\\Get(\n     *     path=\"/heartbeat\",\n     *     summary=\"Checks to see if the api is functional\",\n     *     tags={\"System\"},\n     *     @SWG\\Response(response=200, description=\"Successful operation\"),\n     *     @SWG\\Response(response=500, description=\"Server Error\")\n     * )\n     */"
+			},
+			"response": []
+		}
+	]
+}
